@@ -15,6 +15,7 @@ public class HangFrame extends JFrame {
 	public JMenuBar menu;
 	public TitlePanel title;
 	public InputPanel input;
+	public ResultsPanel results;
 	public QuitListener quitListener = new QuitListener(this);
 	public ResetListener resetListener = new ResetListener(this);
 	private String answer;
@@ -50,6 +51,9 @@ public class HangFrame extends JFrame {
         
         input = new InputPanel();
         this.add(input, BorderLayout.CENTER);
+        
+        results = new ResultsPanel();
+        this.add(results, BorderLayout.SOUTH);
         
         this.setVisible(true);
         

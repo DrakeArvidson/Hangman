@@ -24,6 +24,7 @@ public class InputPanel extends JPanel {
 		super();
 		JPanel panelA = new JPanel();
 		JPanel panelB = new JPanel();
+		JPanel panelC = new JPanel();
 		
 		this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
 		
@@ -36,12 +37,16 @@ public class InputPanel extends JPanel {
 		panelB.add(guessButton);
 		panelB.add(solveButton);
 		
+		panelC.setLayout(new BoxLayout(panelC, BoxLayout.X_AXIS));
+		panelC.add(new JLabel("Number of guesses remaining: "));
+		
 		guessButton.addActionListener(guessController);
 		solveButton.addActionListener(solveController);
 		
 		
 		this.add(panelA);
 		this.add(panelB);
+		this.add(panelC);
 	}
 	
 	public String getGuess() {
